@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>prng on Civiled</title>
+    <link>https://civiled.io/tags/prng/</link>
+    <description>Recent content in prng on Civiled</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://civiled.io/tags/prng/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cyberspace 2024</title>
+      <link>https://civiled.io/writeups/cyberspace/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://civiled.io/writeups/cyberspace/</guid>
+      <description>Binary Manipulation I&amp;rsquo;m given a binary &amp;ldquo;chal&amp;rdquo; with the following protections:
+ Arch: amd64-64-little RELRO: Partial RELRO Stack: Canary found NX: NX enabled PIE: No PIE (0x400000)  Initially I held on to the assumption that shellcoding wouldn&amp;rsquo;t be possible due to NX being enabled. This would prove to be a problem later on. Luckily PIE was disabled so it&amp;rsquo;d be easy to setup debug scripts to break at static locations and I won&amp;rsquo;t have to rely on a memory leak if I want to begin with ROP.</description>
+    </item>
+    
+  </channel>
+</rss>

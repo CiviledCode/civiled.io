@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>shellcode on Civiled</title>
+    <link>https://civiled.io/tags/shellcode/</link>
+    <description>Recent content in shellcode on Civiled</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 31 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://civiled.io/tags/shellcode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shellcoding</title>
+      <link>https://civiled.io/notes/shellcode/</link>
+      <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://civiled.io/notes/shellcode/</guid>
+      <description>Shellcoding is the technique of placing machine code within an RWX (Read-Write-Execute) segment of memory and then jumping execution to it. Shellcoding is possible under two primary circumstances:
+  RWX Segments with a Write Primitive: There are RWX segments in memory, and you have a primitive that allows you to write into these segments.
+  Writing to Virtual Memory via /proc/self/mem: There is a primitive that allows you to write directly to virtual memory through interfaces like /proc/self/mem.</description>
+    </item>
+    
+  </channel>
+</rss>

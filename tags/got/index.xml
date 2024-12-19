@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>got on Civiled</title>
+    <link>https://civiled.io/tags/got/</link>
+    <description>Recent content in got on Civiled</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://civiled.io/tags/got/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HackTheBox - Control Room</title>
+      <link>https://civiled.io/writeups/htb-control-room/</link>
+      <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://civiled.io/writeups/htb-control-room/</guid>
+      <description>This article is hosted on -&amp;gt; Heptabase</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Civiled</title>
+    <link>https://civiled.io/tags/</link>
+    <description>Recent content in Tags on Civiled</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://civiled.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>got</title>
+      <link>https://civiled.io/tags/got/</link>
+      <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://civiled.io/tags/got/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oob</title>
+      <link>https://civiled.io/tags/oob/</link>
+      <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://civiled.io/tags/oob/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>printf</title>
+      <link>https://civiled.io/tags/printf/</link>
+      <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://civiled.io/tags/printf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pwn</title>
+      <link>https://civiled.io/tags/pwn/</link>
+      <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://civiled.io/tags/pwn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>r2</title>
+      <link>https://civiled.io/tags/r2/</link>
+      <pubDate>Sun, 22 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://civiled.io/tags/r2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tool</title>
+      <link>https://civiled.io/tags/tool/</link>
+      <pubDate>Sun, 22 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://civiled.io/tags/tool/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>prng</title>
+      <link>https://civiled.io/tags/prng/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://civiled.io/tags/prng/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rop</title>
+      <link>https://civiled.io/tags/rop/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://civiled.io/tags/rop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shellcoding</title>
+      <link>https://civiled.io/tags/shellcoding/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://civiled.io/tags/shellcoding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>execute</title>
+      <link>https://civiled.io/tags/execute/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://civiled.io/tags/execute/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>heapexp</title>
+      <link>https://civiled.io/tags/heapexp/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://civiled.io/tags/heapexp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>read</title>
+      <link>https://civiled.io/tags/read/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://civiled.io/tags/read/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>technique</title>
+      <link>https://civiled.io/tags/technique/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://civiled.io/tags/technique/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>write</title>
+      <link>https://civiled.io/tags/write/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://civiled.io/tags/write/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shellcode</title>
+      <link>https://civiled.io/tags/shellcode/</link>
+      <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://civiled.io/tags/shellcode/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

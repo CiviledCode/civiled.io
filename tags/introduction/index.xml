@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>introduction on Civiled</title>
+    <link>https://civiled.io/tags/introduction/</link>
+    <description>Recent content in introduction on Civiled</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Sep 2024 01:43:15 -0700</lastBuildDate><atom:link href="https://civiled.io/tags/introduction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>whoami</title>
+      <link>https://civiled.io/about/about/</link>
+      <pubDate>Mon, 02 Sep 2024 01:43:15 -0700</pubDate>
+      
+      <guid>https://civiled.io/about/about/</guid>
+      <description>Currently, I am actively competing in Capture The Flag (CTF) events as a member of the Hellbound team, focusing on pwn and other security-related challenges. My journey into security research began in earnest after graduating from high school, when I discovered my passion for pwn and reverse engineering. This led me to join the CTF team /bin/catz in mid-2022, where I honed my skills before taking a brief hiatus to deepen my understanding of computer security and software development fundamentals.</description>
+    </item>
+    
+  </channel>
+</rss>
